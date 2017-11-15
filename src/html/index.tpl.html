@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uband友班</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+
+    <!-- 以下所有注释在打包时会自动清楚 -->
+    <!-- 后面的模版渲染方法，渲染以下两个加了hash值的css -->
+    <!--<link rel="stylesheet" type="text/css" href="/style/vendor.bundle.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/style/style.bundle.css">-->
+    <% for (var cssFile of htmlWebpackPlugin.files.css) { %><link rel="stylesheet" type="text/css" href="/<%= cssFile %>">
+    <% } %>
+</head>
+<body>
+<div id="content"></div>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://cdn.bootcss.com/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.js"></script>
+<script src="https://cdn.bootcss.com/viewport-units-buggyfill/0.6.2/viewport-units-buggyfill.hacks.min.js"></script>
+<script src="/vendor.js"></script>
+<!-- 后面的模版渲染方法，渲染加了hash值的js们，并按顺序进行js加载 -->
+<% for (var jsFile of htmlWebpackPlugin.files.js) {%><script src="/<%= jsFile %>"></script>
+<% } %>
+<script>window.viewportUnitsBuggyfill.init({hacks: window.viewportUnitsBuggyfillHacks});</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106844310-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106844310-2');
+</script>
+</body>
+</html>

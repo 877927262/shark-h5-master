@@ -1,0 +1,413 @@
+@import "./variable.scss";
+@import "./mixin";
+
+.enroll-page {
+  .enroll-list{
+    background-color: #fff;
+  }
+  display: block;
+  .margin-head {
+    height: 2.2rem;
+  }
+  .carousel {
+    margin-top: 44px;
+    height: 6.25rem;
+  }
+
+  .enroll-course-list {
+    padding-bottom: 2.5rem;
+    border-bottom: none;
+    &:after{
+      border-bottom: none;
+    }
+  }
+
+  .enroll-course-cell {
+    &.weui-cell:before {
+      border-top: none;
+    }
+
+    margin: 0.5rem 0.8rem;
+    padding: .75rem;
+    border-radius: 0.4rem;
+    border: 1px solid $enroll-course-border-color;
+
+    .course-cover {
+      width: 4.8rem;
+      height: 2.7rem;
+      margin-right: .75rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .course-info {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      justify-content: space-between;
+      width: 1px; //flex=1 会将其撑开
+
+      div {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .course-title {
+        font-size: .6rem;
+        line-height: 1.2rem;
+      }
+      .course-extra {
+        font-size: .5rem;
+        line-height: 0.9rem;
+
+        .course-author {
+          margin-right: 0.5rem;
+        }
+        .course-desc {
+          color: #9b9b9b;
+        }
+      }
+    }
+  }
+
+  .tip-word {
+    margin-top: .75rem;
+    text-align: center;
+    font-size: .5rem;
+    color: #9B9B9B;
+  }
+
+  .course-detail {
+    .course-img {
+      height: 10.5rem;
+      width: 100vw;
+    }
+
+    .course-introduction {
+
+      .course-intro-wrapper {
+        padding: .5rem .625rem .5rem .75rem;
+        font-size: .6rem;
+
+        .course-title {
+          font-size: .75rem;
+          font-weight: bold;
+        }
+
+        .clazz-description-container {
+          margin-top: .5rem;
+        }
+
+        .clazz-task-container {
+          margin-top: 2.05rem;
+        }
+
+        .qa-button {
+          margin-left: .3rem;
+          margin-right: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .web-view {
+    word-break: break-all;
+    white-space: pre-wrap;
+    margin-bottom: 3rem;
+    padding-left: 15px;
+    padding-right: 12.5px;
+
+    img {
+      max-width: 100%;
+    }
+    :first-child{
+      margin-top:0em;
+    }
+  }
+
+  .end-bg {
+    width: 100%;
+    height: 80%;
+
+    .button-light {
+      height: 1.75rem;
+      line-height: 1.75rem;
+    }
+
+    .end-button {
+      width: 80vw;
+    }
+  }
+
+  .enroll-detail .bar-tab {
+    height: 3rem;
+
+    .fix-end {
+      @extend .flex-row;
+      @extend .justify-between;
+      box-sizing: border-box;
+      padding: .625rem .625rem .625rem .75rem;
+      background-color: #ffffff;
+      border-top: solid 1px #CCCCCC;
+
+      .cost-txt {
+        @extend .font-red;
+        font-size: 1rem;
+      }
+
+      .sm-txt {
+        font-size: .6rem;
+      }
+
+      .enroll-button {
+        background-color: $uband-color;
+        color: $white-color;
+        width: 5rem;
+        height: 1.75rem;
+        border-radius: 0;
+        top: 0;
+        font-size: .75rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
+
+  .pay-page {
+    .pay-head {
+      background-color: #FFFFFF;
+      border-bottom: solid 1px #efefef;
+      margin-bottom: 1rem;
+
+      .pay-img {
+        align-self: center;
+        max-height: 4.5rem;
+        width: 42.4vw;
+      }
+
+      .text-content {
+        @extend .justify-between;
+        margin-left: .5rem;
+      }
+
+      .pay-title {
+        font-size: .75rem;
+        margin-top: .375rem;
+      }
+
+      .pay-cost-txt {
+        @extend .flex-row;
+        align-items: flex-end;
+        line-height: .85rem;
+        margin-bottom: .425rem;
+        .text-large {
+          @extend .font-red;
+          font-size: .85rem;
+        }
+
+        .text-small {
+          @extend .font-grey;
+          font-size: .5rem;
+        }
+      }
+    }
+
+    .item-content {
+      border-bottom: 0;
+
+      &.promoter-user-item {
+        .item-inner {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+
+          .item-title {
+            display: flex;
+            align-items: center;
+
+            font-size: 0.7rem;
+
+            .promoter-user-avatar {
+              margin-bottom: 0;
+
+              width: 2.4rem;
+              height: 2.4rem;
+
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      .promotion-code-input {
+        margin-top: -0.4rem;
+        padding: 0.25rem;
+
+        height: 1.8rem;
+        width: 5.75rem;
+
+        line-height: 1.8rem;
+
+        border: 1px solid $input-border-color;
+        border-radius: 0.4rem;
+
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .pay-end {
+    height: 3rem;
+    padding: .5rem .5rem .5rem .75rem;
+    font-size: .375rem;
+    .ensure-button {
+      background-color: $uband-color;
+      color: $white-color;
+      height: 100%;
+      width: 100%;
+      border-color: $white-color;
+      top: 0;
+      line-height: 250%;
+    }
+  }
+
+  .control_img img {
+    max-width: 100%;
+  }
+
+  .p-t-lg {
+    padding-top: 30px;
+  }
+
+  &.pay-success-page {
+    $header-height: 2.8rem;
+
+    .pay-success-header {
+      height: $header-height;
+      line-height: $header-height;
+
+      background-color: #F9F9F9;
+
+      .share-tip {
+        font-size: 0.7rem;
+        color: $info-font-color;
+      }
+    }
+
+    .pay-success-content {
+      top: $header-height;
+
+      .success-message {
+        background-color: $white-color;
+
+        .success-message-title {
+          height: 2.5rem;
+          line-height: 1rem;
+
+          font-size: 0.8rem;
+          color: $info-font-color;
+
+          .course-title {
+            color: $uband-color;
+          }
+        }
+
+        .success-message-form {
+          color: $info-font-color;
+          font-size: 0.7rem;
+          padding-bottom: 0.35rem;
+
+          .phone-number {
+            font-size: 0.8rem;
+
+            .phone-number-input {
+              border: 0.025rem solid $info-font-color;
+
+              width: 8.45rem;
+            }
+          }
+        }
+      }
+
+      .subscribe-guide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .subscribe-alarm {
+          width: 5.4rem;
+        }
+
+        .subscribe-info {
+          margin-top: 0.65rem;
+          width: 8.2rem;
+        }
+
+        .subscribe-qrcode {
+          width: 11.05rem;
+        }
+      }
+    }
+  }
+}
+
+.weui-dialog__bd .modal-text {
+  font-size: .6rem;
+  text-align: left;
+  font-weight: lighter;
+  color: #000000;
+  margin-bottom: .75rem;
+  .text-title {
+    font-weight: bolder;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-all {
+  flex: 1;
+}
+
+.font-blue {
+  color: #4990E2 !important;
+}
+
+.font-grey {
+  color: #9B9B9B !important;
+}
+
+.font-red {
+  color: #DF4048 !important;
+}
+
+.font-green {
+  color: #4cb521 !important;
+}
+
+.item-content {
+  background-color: #FFFFFF;
+  @include article-layout-mixin;
+
+  p + p {
+    margin-top: 0;
+  }
+}

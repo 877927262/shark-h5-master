@@ -1,0 +1,67 @@
+.audio-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #CFCFCF;
+  height: 2.5rem;
+  max-width: 100vw;
+  margin-top: 1rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  border-radius: 4px;
+  background: white;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  audio {
+    display: none
+  }
+
+  .icon-bg {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #4990E2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-gb {
+    margin-left: 1px;
+  }
+
+  .drag-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    flex: 1;
+
+    .timeline {
+      height: 1px;
+      width: 100%;
+      margin: auto;
+      background-color: #9B9B9B;
+    }
+
+    .playhead {
+      position: absolute;
+      width: .6rem;
+      height: .6rem;
+      background-color: #4990E2;
+      border-radius: 50%;
+      margin-top: -.3rem;
+    }
+  }
+
+  .time-num {
+    color: #9B9B9B;
+    font-size: 10px;
+    font-weight: lighter;
+  }
+
+}

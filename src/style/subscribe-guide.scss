@@ -1,0 +1,32 @@
+@import "./variable";
+
+.subscribe-guide-page {
+  background-color: $white-color;
+  
+  padding-top: 0;
+  margin: auto;
+  text-align: center;
+
+  .unfollow {
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+  .uband-qrcode {
+    margin: auto auto;
+    width: 16rem;
+    height: 13.45rem;
+  }
+
+  .follow-guide {
+    color: $dark-grey-color;
+  }
+
+  .fixed-bottom {
+    position: absolute;
+    width: 100vw;
+    bottom: 5vw;
+
+    color: $dark-grey-color;
+  }
+}

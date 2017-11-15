@@ -1,0 +1,118 @@
+@import "../variable.scss";
+/**
+  morning call 页面的样式表
+**/
+.game-page-group{
+  backgroud-color: $white-color;
+}
+
+.mc-up-area{
+  background: no-repeat url("http://qiniupublic.gambition.cn/shark_img_mc-bg.jpg");
+  background-size:100% 500px;
+}
+.mc-bg-area{
+  background-color: $white-color;
+  padding-top:10px;
+  padding-bottom: 15px;
+  width: 85%;
+  opacity: 0.9;
+  border-radius:10px;
+}
+.mc-head{
+  padding: 10px;
+  height: 40px;
+  .mc-head-icon{
+    width: 1.3rem;
+    border-radius: 50%;
+    float: right;
+  }
+}
+.mc-logo-img{
+  width: 80px;
+  margin: 1rem auto;
+  margin-bottom:0px;
+  display: block;
+}
+
+.mc-desc,.mc-room-btn{
+  font-size: 0.6rem;
+  .mc-slogan{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 800;
+  }
+  ul{
+    list-style: none;
+    margin-top: 0.5em;
+    li{
+      list-style: none;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+  .mc-join{
+    padding-top: 2em;
+  }
+  .mc-button{
+    background: no-repeat url("http://qiniupublic.gambition.cn/shark_img_mc-button.png");
+    background-size:200px 40px;
+    width: 200px;
+    height:43px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.mc-statistics{
+  .mc-st-gender {
+    width:220px;
+    height:100px;
+    .mc-gender-icon{
+      width: 65px;
+    }
+    .mc-st-gender{
+      width: 65px;
+      text-align:center;
+      display:block;
+    }
+    .mc-st-man{
+      float:left;
+    }
+    .mc-st-women{
+      float:right;
+    }
+  }
+  .mc-arrow{
+    width:20px;
+  }
+  .mc-wm{
+    width: 70px;
+  }
+}
+
+/** mc room **/
+.mc-room-head{
+  width: 220px;
+  height: 120px;
+  .mc-user-head{
+    width:60px;
+    border-radius: 50%;
+  }
+}
+.mc-room-status{
+  width: 220px;
+  border:1px solid #DA467E;
+  height:50px;
+}
+
+/** mc share page **/
+.share-img-section{
+  width:12.5rem;
+  height: 460px;
+  .share-img{
+    width:100%;
+    border: 1px #ccc solid;
+  }
+  .share-desc{
+  }
+}

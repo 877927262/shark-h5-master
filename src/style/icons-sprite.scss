@@ -1,0 +1,97 @@
+$comment-edit: -0px -0px 16px 15px;
+$menu: -0px -15px 23px 16px;
+$menu-active: -0px -31px 23px 16px;
+$keyboard-active: -0px -47px 23px 18px;
+$keyboard: -0px -64px 23px 18px;
+$close: -0px -82px 18px 18px;
+$coin: -0px -100px 24px 18px;
+$coupon: -0px -118px 24px 18px;
+$help: -0px -136px 18px 18px;
+$pause: -0px -154px 15px 19px;
+$play: -0px -173px 15px 20px;
+$audio-playing-100: -0px -192px 15px 20px;
+$audio-pause: -0px -212px 15px 20px;
+$heart-empty: -0px -232px 20px 20px;
+$audio-playing-66: -0px -252px 15px 20px;
+$audio-playing-33: -0px -272px 15px 20px;
+$has-read: -0px -292px 33px 21px;
+$microphone-active: -0px -313px 16px 21px;
+$microphone: -0px -333px 16px 21px;
+$heart-full: -0px -354px 21px 21px;
+$send-l: -0px -375px 22px 22px;
+$pause-l: -0px -396px 18px 24px;
+$me-clazz-exit: -0px -420px 24px 24px;
+$course: -0px -444px 21px 24px;
+$alarm: -0px -468px 24px 24px;
+$promotion-center: -0px -492px 26px 26px;
+$account: -0px -518px 26px 26px;
+$task-active: -0px -544px 29px 29px;
+$tab-me-active: -0px -573px 24px 29px;
+$checkin: -0px -602px 29px 29px;
+$weblink: -0px -631px 29px 29px;
+$tab-enroll-list-active: -0px -660px 29px 29px;
+$voice: -0px -689px 29px 29px;
+$video: -0px -718px 29px 29px;
+$task: -0px -747px 29px 29px;
+$tab-enroll-list: -0px -776px 29px 29px;
+$tab-teacher-list: -0px -805px 29px 29px;
+$file: -0px -834px 29px 29px;
+$checkin-active: -0px -863px 29px 29px;
+$tab-course-list: -0px -892px 29px 29px;
+$tab-teacher-list-active: -0px -921px 29px 29px;
+$tab-me: -0px -950px 24px 29px;
+$image: -0px -979px 29px 29px;
+$tab-course-list-active: -0px -1008px 29px 29px;
+$simage-nr: -0px -1037px 38px 31px;
+$simage-hi: -0px -1068px 38px 31px;
+$setting: -0px -1099px 33px 33px;
+$plug: -0px -1132px 24px 33px;
+$score: -0px -1165px 33px 33px;
+$promotion-first-order: -0px -1198px 94px 34px;
+$wechat: -0px -1232px 39px 39px;
+$mark-top: -0px -1271px 44px 44px;
+$tag-close: -0px -1315px 46px 44px;
+$tag-open: -0px -1359px 48px 44px;
+$promotion-invitees: -0px -1403px 49px 49px;
+$promotion-medal: -0px -1452px 49px 49px;
+$promotion-coming: -0px -1501px 49px 49px;
+$promotion-introduction: -0px -1550px 49px 49px;
+$promotion-income: -0px -1599px 49px 49px;
+$promotion-help: -0px -1648px 49px 49px;
+$share-tap: -0px -1697px 34px 51px;
+$share-rotate-tap: -0px -1748px 66px 100px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+   @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+   @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+   @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon-gb {
+  background-image: url('../img/icons.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon-gb {
+    background-image: url('../img/icons@2x.png');
+    background-size: 94px 1848px;
+  }
+}

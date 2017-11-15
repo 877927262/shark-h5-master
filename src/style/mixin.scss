@@ -1,0 +1,73 @@
+@import "variable";
+
+@mixin article-layout-mixin() {
+    background-color: $white-color;
+    //font-family: "", "Droid Sans", "Roboto", "Droid Sans Fallback", "Helvetica Neue", "Lucida Grande", "Microsoft Yahei";
+    //font-family: "", Helvetica;
+    font-family: "";
+
+    //format standard tags in html -- begin
+    p, font {
+        font-size: .8rem;
+        margin-bottom: 0;
+        line-height: 1.3rem;
+    }
+    p {
+        font-weight: normal;
+    }
+    p + p {
+        padding-top: .65rem;
+    }
+    h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        padding-bottom: .75rem;
+    }
+    h2 {
+        font-size: .9rem;
+        font-weight: bold;
+        padding-bottom: .75rem;
+    }
+    h3 {
+        font-size: .85rem;
+        font-weight: bold;
+        padding-bottom: .75rem;
+    }
+    h4 {
+        font-size: .8rem;
+        font-weight: bold;
+        padding-bottom: .65rem;
+    }
+    h5 {
+        font-size: .75rem;
+        font-weight: bold;
+        padding-bottom: .65rem;
+    }
+    h6 {
+        font-size: .7rem;
+        font-weight: bold;
+        padding-bottom: .65rem;
+    }
+    pre {
+        border: thin solid #CFCFCF;
+        background: #EFEFEF;
+        padding: .75rem .75rem;
+        margin-bottom: .65rem;
+        font-size: .7rem;
+    }
+    img {
+        margin-bottom: .65rem;
+        max-width: 100%;
+    }
+    video, audio {
+        margin-bottom: .65rem;
+    }
+    li {
+        list-style-position: inside;
+
+        * {
+            display: inline;
+        }
+    }
+    //format standard tags in html -- ends
+}

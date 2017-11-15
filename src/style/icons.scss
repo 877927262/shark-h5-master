@@ -1,0 +1,256 @@
+@import "./icons-sprite.scss";
+
+.icon-gb {
+  vertical-align: middle;
+}
+
+.icon-gb-course {
+  @include sprite($course);
+}
+
+.icon-gb-account {
+  @include sprite($account);
+}
+
+.icon-gb-coupon {
+  @include sprite($coupon);
+}
+
+.icon-gb-coin {
+  @include sprite($coin);
+}
+
+.icon-gb-score {
+  @include sprite($score)
+}
+
+.icon-gb-wechat {
+  @include sprite($wechat);
+}
+
+.icon-gb-help {
+  @include sprite($help);
+}
+
+.icon-gb-task {
+  @include sprite($task);
+}
+
+.weui-bar__item_on .icon-gb-task {
+  @include sprite($task-active);
+}
+
+.icon-gb-checkin {
+  @include sprite($checkin);
+}
+
+.weui-bar__item_on .icon-gb-checkin {
+  @include sprite($checkin-active);
+}
+
+.icon-gb-image {
+  @include sprite($image);
+}
+
+.icon-gb-voice {
+  @include sprite($voice);
+}
+
+.icon-gb-video {
+  @include sprite($video);
+}
+
+.icon-gb-weblink {
+  @include sprite($weblink);
+}
+
+.icon-gb-close {
+  @include sprite($close);
+}
+
+.icon-gb-microphone {
+  @include sprite($microphone, inline-block)
+}
+
+.icon-gb-keyboard {
+  @include sprite($keyboard, inline-block)
+}
+
+.icon-gb-menu {
+  @include sprite($menu, inline-block)
+}
+
+.active .icon-gb-microphone {
+  @include sprite($microphone-active, inline-block)
+}
+
+.active .icon-gb-keyboard {
+  @include sprite($keyboard-active, inline-block)
+}
+
+.active .icon-gb-menu {
+  @include sprite($menu-active, inline-block)
+}
+
+.icon-gb-play {
+  @include sprite($play, inline-block);
+}
+
+.icon-gb-pause {
+  @include sprite($pause, inline-block);
+}
+
+.icon-gb-pause-l {
+  @include sprite($pause-l, inline-block);
+}
+
+.icon-gb-send-l {
+  @include sprite($send-l, inline-block);
+}
+
+.icon-gb-tab-course-list {
+  @include sprite($tab-course-list, inline-block);
+}
+
+.icon-gb-tab-course-list-active {
+  @include sprite($tab-course-list-active, inline-block);
+}
+
+.icon-gb-tab-me {
+  @include sprite($tab-me, inline-block);
+}
+
+.icon-gb-tab-me-active {
+  @include sprite($tab-me-active, inline-block);
+}
+
+.icon-gb-tab-enroll-list {
+  @include sprite($tab-enroll-list, inline-block);
+}
+
+.icon-gb-tab-enroll-list-active {
+  @include sprite($tab-enroll-list-active, inline-block);
+}
+
+.icon-gb-tab-teacher-list {
+  @include sprite($tab-teacher-list, inline-block);
+}
+
+.icon-gb-tab-teacher-list-active {
+  @include sprite($tab-teacher-list-active, inline-block);
+}
+
+.icon-gb-comment-edit {
+  @include sprite($comment-edit, inline-block);
+}
+
+.icon-gb-file {
+  @include sprite($file)
+}
+
+.icon-gb-attach {
+  @include sprite($file)
+}
+
+/**
+  game mc icons
+**/
+
+.icon-gb-plug {
+  @include sprite($plug)
+}
+
+.icon-gb-mark-top {
+  @include sprite($mark-top)
+}
+
+.icon-gb-heart-full {
+  @include sprite($heart-full)
+}
+
+.icon-gb-heart-empty {
+  @include sprite($heart-empty)
+}
+
+.icon-gb-alarm {
+  @include sprite($alarm)
+}
+
+.icon-gb-share-tap {
+  @include sprite($share-tap)
+}
+
+.icon-gb-has-read {
+  @include sprite($has-read)
+}
+
+.icon-gb-tag-open {
+  @include sprite($tag-open)
+}
+
+.icon-gb-tag-close {
+  @include sprite($tag-close)
+}
+
+.icon-gb-promotion-medal {
+  @include sprite($promotion-medal)
+}
+
+.icon-gb-promotion-invitees {
+  @include sprite($promotion-invitees)
+}
+
+.icon-gb-promotion-introduction {
+  @include sprite($promotion-introduction)
+}
+
+.icon-gb-promotion-income {
+  @include sprite($promotion-income)
+}
+
+.icon-gb-promotion-help {
+  @include sprite($promotion-help)
+}
+
+.icon-gb-promotion-coming {
+  @include sprite($promotion-coming)
+}
+
+.icon-gb-promotion-first-order {
+  @include sprite($promotion-first-order)
+}
+
+.icon-gb-promotion-tap {
+  @include sprite($share-rotate-tap)
+}
+
+.icon-gb-promotion-center {
+  @include sprite($promotion-center)
+}
+
+.icon-gb-audio-pause {
+  @include sprite($audio-pause)
+}
+
+.icon-gb-audio-playing {
+  @include sprite($audio-playing-33);
+
+  @keyframes audio-playing {
+    33% {
+      @include sprite($audio-playing-33);
+    }
+    66% {
+      @include sprite($audio-playing-66);
+    }
+    100% {
+      @include sprite($audio-playing-100);
+    }
+  }
+
+  animation: audio-playing 1s step-start infinite;
+}
+
+.icon-me-exit-clazz {
+  @include sprite($me-clazz-exit);
+}
+

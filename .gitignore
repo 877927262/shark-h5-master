@@ -1,0 +1,16 @@
+node_modules
+.idea
+dist/*
+bin/*
+assets/
+bin/
+vendor/
+manifest.json
+src/js/config.js
+
+#for mac
+.DS_Store
+
+# for deploy
+dist.tgz
+start.sh

@@ -1,0 +1,25 @@
+.checkin-center-page {
+  .checkin-center-course-desc {
+    display: flex;
+
+    .icon-not-checkin {
+      background: #DF4048;
+    }
+
+    .icon-has-checkin {
+      background: #7ED321;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      align-self: center;
+    }
+
+    .course-desc-flexible {
+      flex: 1;
+    }
+  }
+
+}

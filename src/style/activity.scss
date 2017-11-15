@@ -1,0 +1,371 @@
+@import "./variable";
+@import "./mixin";
+
+.activity-page {
+  display: block;
+  .margin-head {
+    top: $header-height;
+    background: $white-color;
+  }
+
+  .top-banner {
+    height: 3.25rem;
+    border: 0.1rem dashed #FF99A8;
+    margin: 0.5rem 0.8rem 0;
+    border-radius: 0.4rem;
+  }
+
+  .top-banner img {
+    display: block;
+    margin: auto;
+    height: 0.75rem;
+    width: 5rem;
+    margin-top: 25px;
+  }
+
+  .activity-list {
+    &.weui-cells:before {
+      border: 0;
+    }
+  }
+
+  .activity-cell {
+    &.weui-cell:before {
+      border-top: none;
+    }
+
+    margin: 0.5rem 0.8rem;
+    padding: .75rem;
+    border-radius: 0.4rem;
+    border: 1px solid $enroll-course-border-color;
+
+    .activity-cover {
+      width: 4.8rem;
+      height: 2.7rem;
+      margin-right: .75rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .activity-info {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      justify-content: space-between;
+      width: 1px; //flex=1 会将其撑开
+
+      div {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .activity-title {
+        font-size: .6rem;
+        line-height: 1.2rem;
+      }
+      .activity-extra {
+        font-size: .5rem;
+        line-height: 0.9rem;
+
+        .activity-date {
+          margin-right: 0.5rem;
+        }
+        .activity-desc {
+          color: #9b9b9b;
+        }
+      }
+    }
+
+    .activity-status {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      width: 44px;
+      height: 16px;
+      border-radius: 5px 0 0 5px;
+      font-size: .4rem;
+      color: $white-color;
+      line-height: .8rem;
+      text-align: center;
+    }
+    .activity-status-open {
+      background: #B2E200;
+    }
+    .activity-status-close {
+      background: #AAAAAA;
+    }
+    .activity-status-processing {
+      background: #4ECEFF;
+    }
+  }
+
+  .activity-detail {
+    background: $white-color;
+    padding-bottom: 60px;
+
+    .activity-detail-header {
+      height: 60vw;
+      .info-cell {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        .avatar-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            margin: .4rem 0;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            background-color: #b4b4b4;
+          }
+
+          .info-wrap {
+            padding: 0.025rem 0.6rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            width: 80vw;
+            height: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+          }
+        }
+      }
+
+      .activity-img {
+        width: 100vw;
+
+        position: absolute;
+        z-index: 10;
+      }
+    }
+
+    .battery {
+      display: flex;
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      margin-top: 20px;
+
+      .battery-img {
+        align-self: flex-end;
+        max-width: 80vw;
+      }
+    }
+
+    .plug-percent {
+      margin-bottom: 30px;
+    }
+
+    .btn-charging {
+      margin-bottom: 12px;
+      width: 80vw;
+      background: $green-color;
+    }
+
+    .text-charging-remain {
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .text-charging-hint {
+      color: #9b9b9b;
+      font-size: 13px;
+    }
+  }
+
+  .activity-detail-footer {
+    footer {
+      display: flex;
+      align-items: flex-end;
+      height: 0;
+    }
+    footer:before {
+      height: 0;
+    }
+    .btn-footer {
+      border-radius: 0;
+    }
+  }
+
+  .qrcode-wrap {
+    width: 200px;
+    margin: auto;
+
+    .qrcode {
+      max-width: 200px;
+
+    }
+  }
+
+  .flex-row-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .align-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .flex-all {
+    flex: 1;
+  }
+
+}
+// todo 删除
+//.weui-dialog__bd .modal-text {
+//  font-size: .6rem;
+//  text-align: left;
+//  font-weight: lighter;
+//  color: #000000;
+//  margin-bottom: .75rem;
+//  .text-title {
+//    font-weight: bolder;
+//  }
+//}
+//
+//.flex-column {
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//.flex-row {
+//  display: flex;
+//  flex-direction: row;
+//}
+//
+//.align-center {
+//  align-items: center;
+//}
+//
+//.justify-center {
+//  justify-content: center;
+//}
+//
+//.justify-between {
+//  justify-content: space-between;
+//}
+//
+//.flex-all {
+//  flex: 1;
+//}
+//
+//.font-blue {
+//  color: #4990E2 !important;
+//}
+//
+//.font-grey {
+//  color: #9B9B9B !important;
+//}
+//
+//.font-red {
+//  color: #DF4048 !important;
+//}
+//
+//.font-green {
+//  color: #4cb521 !important;
+//}
+//
+//.item-content {
+//  background-color: #FFFFFF;
+//  @include article-layout-mixin;
+//}
+
+
+.activity-enroll-page {
+  $activity-header-height: 56.25vw;
+  $activity-footer-height: 2.25rem;
+
+  display: block;
+
+  .activity-enroll-header {
+    position: relative;
+    background-color: $black-color;
+    height: $activity-header-height;
+
+    .icon-left {
+      color: $white-color;
+    }
+
+    .header-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: $activity-header-height;
+    }
+
+    .share-link {
+      font-size: 0.8rem;
+      color: $white-color;
+    }
+  }
+
+  .activity-enroll-body {
+    height:  calc(100vh - #{$activity-header-height} - #{$activity-footer-height});
+
+    .activity-enroll-navbar {
+      padding: 0.55rem 1.2rem 0.85rem;
+
+      height: 2.1rem;
+
+      .activity-enroll-navbar-item {
+        line-height: .7rem;
+        height: .7rem;
+        font-size: .7rem;
+      }
+    }
+
+    .activity-enroll-content-container {
+      position: relative;
+    }
+
+    .activity-enroll-content {
+      @include article-layout-mixin;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .activity-enroll-footer {
+    height: $activity-footer-height;
+
+    button {
+      height: $activity-footer-height;
+      line-height: 2.25rem;
+
+      border-radius: 0;
+      font-size: 0.9rem;
+    }
+  }
+}

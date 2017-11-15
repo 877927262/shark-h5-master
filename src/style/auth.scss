@@ -1,0 +1,52 @@
+@import "./variable.scss";
+
+.auth-page {
+  width: 100%;
+  height: 100vh;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .icon-pos {
+    margin-top: 45%;
+  }
+  .text {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+}
+
+#app-advertisement {
+  height: 3rem;
+  z-index: 150;
+
+  .fix-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: .625rem .625rem .625rem .75rem;
+    background-color: #ffffff;
+    border-top: solid 1px #CCCCCC;
+
+    .cost-txt {
+      color: $red-color;
+      font-size: 1rem;
+    }
+
+    .sm-txt {
+      font-size: .6rem;
+    }
+
+    .enroll-button {
+      background-color: $uband-color;
+      color: $white-color;
+      width: 5rem;
+      height: 1.75rem;
+      border-radius: 0;
+      top: 0;
+      font-size: .75rem;
+      line-height: 1.75rem;
+    }
+  }
+}

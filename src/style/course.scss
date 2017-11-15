@@ -1,0 +1,562 @@
+@import "./variable.scss";
+@import "./mixin";
+
+@mixin border-bottom-line() {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  color: #ccc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+@mixin border-right-line() {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  border-right: 1px solid #ccc;
+  color: #ccc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.limit-task-detail-page {
+  @media (min-width: 1366px) {
+    max-width: 67vw;
+    margin: auto auto;
+  }
+}
+
+.page-header-close-button {
+  margin-left: .4rem;
+}
+
+.course-page {
+  $course-header-height: 30.25vw;
+
+  header {
+      display: block;
+      width: 100vw;
+      padding: 0 0.8rem 0 0.45rem;
+      position: absolute;
+      top: 0;
+      .course-page-more-link {
+        font-size: 0.75rem;
+      }
+    }
+
+  .header-background {
+      height: $course-header-height;
+      width: 100vw;
+    }
+
+  .course-detail {
+    .course-img {
+      height: 10.5rem;
+      width: 100vw;
+    }
+
+    .course-introduction {
+
+      .course-intro-wrapper {
+        padding: .5rem .625rem .5rem .75rem;
+        font-size: .6rem;
+
+        .course-title {
+          font-size: .75rem;
+          font-weight: bold;
+        }
+
+        .clazz-description-container {
+          margin-top: .5rem;
+        }
+
+        .clazz-task-container {
+          margin-top: 0.55rem;
+        }
+
+        .qa-button {
+          margin-left: .3rem;
+          margin-right: 1.1rem;
+        }
+        .icon-gb-help{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .rank-list-cells {
+    margin-top: 0;
+  }
+
+  .rank-infinite-scroll {
+    background-color: white;
+    overflow: auto;
+    max-height: 100vh;
+    height: 100%;
+
+    .rank-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 3.35rem;
+
+      max-width: 100vw;
+
+      &:before {
+        left: 0;
+      }
+
+      &.current-user-rank-item {
+        background-color: $first-item-background-color;
+      }
+
+      .rank-item-header {
+        min-width: 1.3rem;
+      }
+
+      .rank-item-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 0.8rem;
+
+        .rank-item-avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+        .rank-item-name {
+          padding-left: 0.5rem;
+          flex: 1;
+          max-width: 50vw;
+        }
+      }
+
+      .rank-item-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .rank-item-score {
+          color: $black-color;
+        }
+
+        .rank-item-favor {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          padding-left: 0.8rem;
+
+          .rank-item-praise {
+            height: 0.7rem;
+            line-height: 0.7rem;
+            min-width: 1.5rem;
+          }
+
+          .rank-item-heart {
+            height: 0.8rem;
+            line-height: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .course-item-list {
+    .course-item-container {
+      text-align: center;
+      padding: 0.325rem 0.75rem;
+
+      width: 50%;
+
+      .course-item {
+        box-shadow: 0 2px 4px $enroll-course-border-color;
+      }
+
+      .course-avatar {
+        background: $white-color;
+
+        img {
+          // keep width height rate: 16 / 9
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .course-title {
+        background: $white-color;
+        font-size: 0.5rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .task-list-wrap {
+    .task-item {
+      height: 3.35rem;
+      padding: 0.6rem 0.75rem;
+      box-shadow: 0 0.05rem 0.05rem 0 #d9dadc;
+      margin-top: 0;
+      &:before {
+        border-top: 0;
+      }
+
+      .task-item-mark-top {
+        position: absolute;
+        right: 0;
+        top: 0
+      }
+      .task-title {
+        font-size: 0.7rem;
+        color: #000000;
+        margin-top: -0.5rem;
+        padding-left: 0rem;
+
+        &:before {
+          border-top: 0;
+        }
+      }
+      .task-time {
+        margin-top: -0.75rem;
+        color: #999999;
+        font-size: 0.55rem;
+        padding-left:0rem;
+        &:before {
+          border-top: 0;
+        }
+        .task-completed {
+          color: $green-color;
+        }
+      }
+
+    }
+    .task-list-title + .task-item {
+      margin-top: 0;
+    }
+  }
+  .popup-dialog {
+    height: 100vh;
+    overflow: scroll;
+
+    img {
+      width: 100%;
+    }
+
+    .weui-article {
+      background-color: #fff;
+    }
+  }
+
+  .checkin-list-top {
+    position: relative;
+    height: 8rem;
+    background-color: $white-color;
+    &:after {
+      @include border-bottom-line;
+    }
+    .checkin-user {
+      position: relative;
+      height: 4.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .avatar-wrap {
+        width: 3rem;
+        height: 3rem;
+        margin-left: .75rem;
+        margin-right: .75rem;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: #b4b4b4;
+        }
+      }
+      .info-wrap {
+        font-size: .75rem;
+        color: #9b9b9b;
+      }
+      .btn-wrap {
+        flex-grow: 1;
+        text-align: right;
+        margin-right: .75rem;
+      }
+      &:after {
+        @include border-bottom-line;
+      }
+    }
+    .checkin-total {
+      height: 3.5rem;
+      display: flex;
+      .checkin-score, .checkin-day, .checkin-time {
+        padding-top: .3rem;
+        width: 30%;
+        height: 100%;
+        text-align: center;
+        font-size: .7rem;
+        .number {
+          font-size: 1rem;
+        }
+      }
+      .normal {
+        color: #333234;
+      }
+      .unnormal {
+        color: #989898;
+      }
+      .checkin-score {
+        position: relative;
+        color: #333234;
+        width: 40%;
+        &:after {
+          @include border-right-line;
+        }
+      }
+    }
+  }
+  .checkin-list-wrap {
+    .checkin-item {
+      .checkin-score {
+        width: 2rem;
+        height: 2rem;
+        background-color: $uband-color;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-right: .75rem;
+        color: $white-color;
+      }
+      .weui-cell__bd {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        justify-content: space-between;
+        .checkin-time {
+          font-size: .75rem;
+          color: #333234;
+        }
+        .checkin-tip {
+          font-size: .5rem;
+          color: #9b9b9b;
+        }
+      }
+    }
+    .checkin-footer-item {
+      .weui-cell__bd {
+        text-align: center;
+        color: #9b9b9b;
+        font-size: .6rem;
+      }
+    }
+  }
+  .checkin-detail-cell-title {
+    display: flex;
+    .checkin-detail-file-upload {
+      -webkit-box-align: end;
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+  .checkin-detail-cell {
+    .weui-cell__hd {
+      margin-right: .3rem;
+    }
+    .checkin-class, .checkin-date {
+      color: #b2b2b2;
+    }
+    .checkin-file-title {
+      font-size: .6rem;
+      color: #333234;
+    }
+    .checkin-file-time {
+      font-size: .5rem;
+      color: #9b9b9b;
+    }
+  }
+  .checkin-detail-btn {
+    .checkin-detail-text {
+      //display: flex;
+      font-size: .6rem;
+      color: red;
+      margin-top: .4rem;
+    }
+  }
+  .page-title {
+    padding-left: 1rem; //作用是防止当横向分辨率过小的时候，可能出现回退箭头和title的文字重叠起来，缺点：title不会是严格意义上的居中
+  }
+
+  .task-article-content {
+    @include article-layout-mixin;
+
+    .article-title {
+      font-size: 1rem;
+      padding-top: .6rem;
+      padding-left: .7rem;
+      padding-right: .7rem;
+      padding-bottom: 0;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .article-info {
+      font-size: .75rem;
+      color: #888888;
+      padding-left: .7rem;
+      padding-right: .7rem;
+      padding-bottom: 0;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .task-article {
+      padding: .6rem .7rem;
+      letter-spacing: .06rem;
+
+      .article-type {
+        font-size: .8rem;
+        color: $uband-color;
+        line-height: .9rem;
+        margin-top: .3rem;
+        margin-bottom: .75rem;
+        padding-left: .32rem;
+        font-weight: bold;
+        border-left: thick solid $uband-color;
+      }
+
+      .limit-img {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .material-top {
+    position: relative;
+    background-color: $white-color;
+    padding: .6rem .8rem;
+    font-size: .7rem;
+    color: #9b9b9b;
+  }
+  .material-list {
+    position: relative;
+  }
+  .material-cells {
+    margin-top: .0rem;
+  }
+  .material-cell-icon {
+    margin-right: .3rem;
+  }
+
+  .comment-top {
+    position: relative;
+    background-color: $white-color;
+    padding: .6rem .8rem;
+    font-size: .7rem;
+    color: #9b9b9b;
+  }
+  .comment-list {
+    background-color: $white-color;
+    padding-bottom: .8rem;
+    .comment-edit {
+      display: flex;
+      align-items: center;
+      .comment-edit-img {
+        margin: .0rem .0rem .0rem auto;
+      }
+      .comment-edit-btn {
+        margin: .0rem .9rem .0rem .0rem;
+        font-size: .7rem;
+      }
+    }
+    .comment-empty {
+      .comment-empty-img {
+        margin: 0 auto;
+      }
+      .comment-empty-text {
+        margin: 0 auto;
+        font-size: .6rem;
+        color: #9b9b9b;
+      }
+    }
+    .comment-item {
+      display: flex;
+      padding-top: .8rem;
+      .comment-avatar {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: .8rem;
+        margin-right: .6rem;
+        flex-shrink: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          background-color: #b4b4b4;
+        }
+      }
+      .comment-content-wrap {
+        .comment-user {
+          color: #9b9b9b;
+          font-size: .8rem;
+          line-height: 1;
+          margin-bottom: .3rem;
+        }
+        .comment-content {
+          font-size: .75rem;
+          line-height: 1rem;
+          padding-right: .8rem;
+        }
+        .comment-time {
+          color: #9b9b9b;
+          font-size: .6rem;
+          line-height: 1.3rem;
+        }
+      }
+    }
+    .comment-replies {
+      margin-left: 3rem;
+      margin-right: 1rem;
+      border-top: 1px solid #ccc;
+
+      .reply-title {
+        color: #9b9b9b;
+        font-size: .8rem;
+        line-height: .8rem;
+        margin: 8px 0;
+        padding-left: 5px;
+        border-left: 2px solid $green-color;
+      }
+
+      .reply-content {
+        font-size: .75rem;
+        line-height: 1rem;
+        padding-left: 5px;
+      }
+
+      .reply-time {
+        color: #9b9b9b;
+        font-size: .6rem;
+        line-height: 1.3rem;
+        padding-left: 5px;
+      }
+    }
+  }
+}

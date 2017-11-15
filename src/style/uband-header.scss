@@ -1,0 +1,16 @@
+@import './variable';
+
+.uband-header {
+  height: $header-height;
+
+  .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo-img{
+      width: 84px;
+      height: 38px;
+    }
+  }
+}

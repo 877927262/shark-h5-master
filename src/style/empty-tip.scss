@@ -1,0 +1,20 @@
+@import "./variable.scss";
+
+.empty-tip {
+  height: 8.5rem;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .empty-photo{
+    width: 82px;
+    height: 115px;
+  }
+
+  .empty-text {
+    font-size: .6rem;
+    color: #9b9b9b;
+  }
+}

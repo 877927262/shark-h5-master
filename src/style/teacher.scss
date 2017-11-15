@@ -1,0 +1,378 @@
+@import "./variable";
+@import "./mixin";
+
+.teacher-page {
+  display: block;
+  .content {
+    background: $white-color;
+  }
+
+  .teacher-list {
+    padding-bottom: 2.5rem;
+
+    &:before {
+      border: 0;
+    }
+
+    .teacher-cell {
+      margin: 0.5rem 0.8rem;
+      padding: .75rem;
+      border-radius: 0.4rem;
+      border: 1px solid $enroll-course-border-color;
+      &:before {
+        border-top: none;
+      }
+
+      .avatar-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 3.4rem;
+          height: 3.4rem;
+          border-radius: 50%;
+          background-color: #b4b4b4;
+        }
+      }
+
+      .teacher-info {
+        margin-left: 1rem; // 添加间距
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        justify-content: space-around;
+        width: 1px;
+
+        .teacher-header {
+          display: flex;
+          align-items: center;
+
+          .teacher-name {
+            flex: 1;
+            font-size: .7rem;
+          }
+
+          .header-text-hint {
+            font-size: .5rem;
+            color: $dark-grey-color;
+            white-space: nowrap;
+            width: 3rem; // 宽度控制显示的数字的长度，这个宽短可以完美显示5位数字，再长的话就会被隐藏掉
+          }
+          .header-text-hint-gap {
+            margin-right: .5rem;
+          }
+        }
+
+        .teacher-desc {
+          font-size: .6rem;
+          color: $dark-grey-color;
+        }
+
+        .teacher-label {
+          font-size: .5rem;
+          .label-0 {
+            // 未知
+            background-color: #BD0FE1;
+          }
+          .label-1 {
+            //男
+            background-color: #20B9FC;
+          }
+          .label-2 {
+            //女
+            background-color: #FF4060;
+          }
+          .badge{
+            color: $white-color;
+            margin-right: .5rem;
+          }
+        }
+      }
+
+    }
+  }
+
+  .teacher-detail {
+    .teacher-detail-header {
+      display: flex;
+      justify-content: center;
+
+      .back-btn {
+        position: absolute;
+        top: 1rem;
+        left: 0.75rem;
+        z-index: 300; //要不然被挡住了，就不能愉快的按了
+      }
+
+      .weui-btn_primary.weui-btn_disabled { //强制重写weui的button的disabled的样式
+        background-color: rgba(255, 64, 96, 0.50);
+        color: $white-color;
+      }
+      .follow-btn {
+        position: absolute;
+        top: 1.1rem; //微调，不知道为什么不是同一个水平线上的 TODO：xxx
+        right: 0.75rem;
+        width: auto;
+        height: 1.35rem;
+        line-height: 1.35rem;
+        overflow: hidden;
+        border-radius: 0.675rem;
+        z-index: 300; //要不然被挡住了，就不能愉快的按了
+      }
+
+      .teacher-detail-header-banner {
+        width: 100vw;
+        height: 56.25vw;
+      }
+
+      .teacher-detail-header-teacher-info-box {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: calc(31.25vw - 4.8rem); //top: calc(56.25vw - 25vw - 0.4rem * 2 - 4rem); 通过header中的banner高度和teacher infobox的高度，计算出距离上半部分的高度
+
+        .avatar-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            margin: .4rem 0;
+
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            background-color: #b4b4b4;
+          }
+
+          .info-wrap {
+            padding: 0.5rem 0.6rem;
+            background: rgba(255, 255, 255, 0.5);
+            width: 100vw;
+            height: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            span {
+              max-width: 100vw;
+            }
+
+            .teacher-name {
+              font-size: .9rem;
+            }
+            .teacher-social-info {
+              font-size: .6rem;
+            }
+            .teacher-desc {
+              font-size: .6rem;
+              padding-left: 1.4rem;
+              padding-right: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+
+    .teacher-detail-content {
+      background-color: $white-color;
+      height: calc(100vh - 56.25vw); // 重新计算高度，除去图片的高度就好，不写这个会导致下面内容不会充满整个屏幕
+
+      .teacher-detail-content-navbar {
+        padding: .4rem 0; // 为了让nav tab 的内容居中，垂直居中以及水平居中
+
+        .clazz-open-badge {
+          position: absolute;
+          top: -0.4em;
+          right: .2rem;
+        }
+      }
+      .teacher-detail-content-navcontent {
+        padding-bottom: 0.5rem;
+        background-color: white;
+        // 定义了每个nav 的content的最父亲的css类
+
+        .nav-teacher-introduction-wrap + .nav-teacher-meaty-sharings-wrap + .nav-teacher-commends-wrap + .nav-teacher-clazzes-wrap {
+          height: inherit;
+        }
+
+        .nav-teacher-introduction-wrap { //第一个tab，笃师介绍下的内容的wrap
+          padding: .75rem;
+
+          .nav-teacher-introduction-content {
+            padding: .5rem;
+            margin-bottom: 0.5rem;
+            height: auto;
+            border: 1px solid $grey-color;
+            border-radius: 8px;
+            font-size: .6rem;
+            color: $primary-font-color;
+          }
+        }
+
+        .nav-teacher-meaty-sharings-wrap { //第二个tab，干货分享下的内容的wrap
+          .nav-teacher-meaty-sharings-cells { //TODO: 文字过长的显示需要考虑，时间原因先不作处理
+            &:after {
+              border-bottom: none;
+            }
+
+            .nav-teacher-meaty-sharings-cell {
+
+              .cell-body-all {
+                .cell-body-wrap {
+                  display: flex;
+                  flex-direction: column;
+
+                  .sharing-name {
+                    font-size: .6rem;
+                  }
+                  .sharing-time {
+                    font-size: .4rem;
+                    color: $dark-grey-color;
+                  }
+                }
+              }
+
+              .cell-footer-all {
+                .cell-footer-wrap {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+
+                  .read-count {
+                    font-size: .6rem;
+                    width: 2rem; //为了靠左对齐
+                    text-align: left;
+                    margin-left: 0.3rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .nav-teacher-commends-wrap { //第三个tab，commends下的内容的wrap
+          display: flex;
+          flex-direction: column;
+
+          .nav-teacher-commends-hint {
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+            align-self: center;
+            font-size: .7rem;
+          }
+
+          .nav-teacher-commends {
+            margin-left: .75rem;
+            margin-right: .75rem;
+
+            .commend-list {
+              background-color: $white-color;
+              padding-bottom: .8rem;
+              .commend-item {
+                display: flex;
+                padding-top: .8rem;
+
+                .commend-avatar {
+                  width: 1.9rem;
+                  height: 1.9rem;
+                  margin-right: .5rem;
+                  flex-shrink: 0;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #b4b4b4;
+                    border-radius: 50%;
+                  }
+                }
+                .commend-content-wrap {
+                  flex: 1;
+
+                  .commend-user {
+                    color: #9b9b9b;
+                    font-size: .5rem;
+                    line-height: 1;
+                    margin-bottom: .3rem;
+                    display: flex;
+                    justify-content: space-between;
+                  }
+                  .commend-content {
+                    font-size: .6rem;
+                    line-height: 1rem;
+                    text-align: justify;
+                  }
+                }
+              }
+
+            }
+          }
+
+        }
+
+        .nav-teacher-clazzes-wrap { //第四个tab，class下的内容的wrap
+          .teacher-course-list {
+            &:after {
+              border-bottom: none;
+            }
+
+            padding-bottom: 2.5rem;
+
+            .teacher-course-cell {
+              &.weui-cell:before {
+                border-top: none;
+              }
+
+              margin: 0.5rem 0.8rem;
+              padding: .75rem;
+              border-radius: 0.4rem;
+              border: 1px solid $enroll-course-border-color;
+
+              .course-cover {
+                width: 4.8rem;
+                height: 2.7rem;
+                margin-right: .75rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .course-info {
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+                justify-content: space-around;
+                width: 1px; //flex=1 会将其撑开
+
+                .course-title {
+                  font-size: .6rem;
+                  line-height: 1.2rem;
+                }
+                .course-extra {
+                  font-size: .5rem;
+                  line-height: 0.9rem;
+
+                  .course-desc {
+                    .course-student-num {
+                      color: $dark-grey-color;
+                    }
+                  }
+                }
+              }
+              .course-status {
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+      .weui-navbar + .weui-tab__panel {
+        padding-top: 1.85rem;
+      }
+
+    }
+  }
+}

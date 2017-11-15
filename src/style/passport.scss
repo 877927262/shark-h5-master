@@ -1,0 +1,60 @@
+@import "./variable.scss";
+.passport-page {
+  .content {
+    background-color: white;
+
+    .passport-header {
+      background: no-repeat url("http://qiniupublic.gambition.cn/shark_img_passport-header.png");
+      height: 7.5rem;
+      background-size: cover;
+      display: flex;
+      border-bottom: solid 7px $yellow-color;
+      flex-direction:column;
+      justify-content:center;
+      align-items: center;
+
+      .passport-header-text {
+        color: white;
+      }
+
+      .passport-header-text:first-child {
+        margin-right: 3.5rem;
+      }
+
+      .passport-header-text:nth-child(2) {
+        margin-left: 3.5rem;
+      }
+    }
+
+    .passport-section {
+      padding-bottom: 10px;
+
+      .passport-section-title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+
+        .passport-section-title-main {
+          font-size: 0.8rem;
+          color: black;
+        }
+
+        .passport-section-title-description {
+          margin-top: 3px;
+          font-size: 0.6rem;
+          color: #9B9B9B;
+        }
+      }
+
+      [class*=" weui-icon-"]:before, [class^=weui-icon-]:before {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .passport-submit-btn-content {
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+    }
+  }
+}

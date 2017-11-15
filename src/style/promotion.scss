@@ -1,0 +1,866 @@
+@import "./variable.scss";
+@import "./reset.scss";
+
+.promotion-page {
+  font-family: Arial;
+  height: 100%;
+  overflow: auto;
+  background-color: $white-color;
+  .weui-btn:after {
+    border: 0;
+  }
+
+  .page-header {
+    border-bottom: 0.05rem $first-item-background-color solid;
+  }
+  //“确认加入伙伴中心”页面样式
+  .agreement-page-main {
+    position: relative;
+    background-color: $white-color;
+
+    .agreement-page-main-user {
+      border-top: 0.05rem $first-item-background-color solid;
+      border-bottom: 0.05rem $first-item-background-color solid;
+      .agreement-page-main-user-photo {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .agreement-page-main-user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0.7rem;
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        .studentNumber {
+          font-size: 0.7rem;
+          color: $info-font-color;
+        }
+      }
+
+      .agreement-page-main-user-join {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 0.5rem;
+        color: #4a4a4a;
+        .user-join-day {
+          font-size: 1rem;
+          color: $uband-color;
+        }
+      }
+    }
+
+    .agreement-page-main-description {
+      font-size: 0.8rem;
+      color: #4a4a4a;
+      .description-span {
+        color: $uband-color;
+      }
+    }
+
+    .agreement-page-main-agree {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      flex: 1;
+      .agreement-page-main-allies-photo, .allies-photo-more {
+        border-radius: 2.5rem;
+        width: 9vw;
+        height: 9vw;
+        margin: 0 1.7vw;
+      }
+    }
+
+    .agreement-page-main-allies-number {
+      font-size: 0.5rem;
+      color: #4a4a4a;
+    }
+  }
+
+  .agreement-page-footer {
+    position: relative;
+    background-color: $white-color;
+    .agreement-page-footer-agree {
+      font-size: 0.7rem;
+      color: #4a4a4a;
+      margin: 0.7rem 0;
+    }
+
+    .agreement-page-footer-button {
+      width: 50%;
+      margin-bottom: 0.7rem;
+      border-radius: 2.5rem;
+      font-size: 0.85rem;
+    }
+  }
+  //“伙伴中心”页面样式
+  .home-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .home-page-main-user {
+      border-top: 0.05rem $first-item-background-color solid;
+      border-bottom: 0.05rem $first-item-background-color solid;
+      .user-income, .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        .user-income-number {
+          font-size: 1.25rem;
+          color: $uband-color;
+        }
+
+        .user-income-des, .user-info-name {
+          font-size: 0.8rem;
+          color: #4a4a4a;
+        }
+
+        .user-info-number {
+          font-size: 0.7rem;
+          color: $info-font-color;
+        }
+      }
+
+      .user-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.05rem;
+        flex: 0;
+        .user-photo-icon {
+          width: 3.05rem;
+          height: 3.05rem;
+          border-radius: 2.5rem;
+        }
+      }
+    }
+
+    .home-page-main-invitation {
+      p {
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        .invitecode {
+          width: 4rem;
+          border: 0;
+        }
+      }
+
+      .copy-button {
+        width: 5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        border-radius: 2.5rem;
+      }
+    }
+  }
+
+  .home-page-footer {
+    position: relative;
+    .weui-grids:before {
+      border: 0;
+    }
+
+    .home-page-footer-icon {
+      width: 30%;
+      margin: 0.5rem 1.6%;
+      border-radius: 0.5rem;
+      border: 0.05rem $first-item-background-color solid;
+      &:before, &:after {
+        border: 0;
+      }
+
+      .icon-label {
+        margin-top: 1.5rem;
+      }
+
+      .icon-label-grey {
+        color: $info-font-color;
+      }
+    }
+  }
+  //“我的收益”页面样式
+  .income-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .income-page-main-profit {
+      border-bottom: 0.05rem $first-item-background-color solid;
+      .profit {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .profit-number {
+          font-size: 1.5rem;
+          color: $uband-color;
+        }
+
+        .profit-balance {
+          font-size: 0.7rem;
+          color: $info-font-color;
+        }
+      }
+
+      .income-page-main-recored {
+        left: 70%;
+        right: 1rem;
+        border: 0.05rem $first-item-background-color solid;
+        font-size: 0.6rem;
+        color: $info-font-color;
+      }
+    }
+
+    .income-page-main-list {
+      .income-main-list {
+        &:before {
+          left: 0;
+        }
+
+        .list-road-number, .list-withdraw-number {
+          color: $uband-color;
+        }
+      }
+    }
+
+    .income-main-description {
+      margin-bottom: 2.35rem;
+      font-size: 0.8rem;
+      color: #4a4a4a;
+      section:nth-child(1), section:nth-child(5) {
+        font-size: 1rem;
+        color: $uband-color;
+      }
+
+      section:nth-child(2), section:nth-child(3) {
+        span:nth-child(1) {
+          color: $uband-color;
+        }
+      }
+    }
+  }
+
+  .income-footer {
+    button {
+      position: fixed;
+      height: 2.35rem;
+      bottom: 0;
+      border-radius: 0;
+    }
+  }
+  //“收益记录”页面样式
+  .income-record-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .income-record-page-main-list {
+      .list-info {
+        &:before {
+          left: 0;
+        }
+
+        .list-info-detail {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .list-info-photo {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 2.5rem;
+          }
+        }
+
+        .list-info-des {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          font-size: 0.8rem;
+          color: #4a4a4a;
+          span {
+            width: 7rem;
+          }
+        }
+
+        .list-info-number {
+          width: 5rem;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+          font-size: 0.8rem;
+          color: $info-font-color;
+          .list-info-number-div {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+            .available {
+              color: $uband-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  //“我的友军”页面样式
+  .allies-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .allies-page-main-user {
+      border-top: 0.05rem $first-item-background-color solid;
+      border-bottom: 0.05rem $first-item-background-color solid;
+      .user-des {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 5rem;
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        .user-des-info {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: space-between;
+          .user-des-info-number {
+            color: $uband-color;
+          }
+        }
+      }
+
+      .user-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .user-photo {
+          width: 3.05rem;
+          height: 3.05rem;
+          border-radius: 2.5rem;
+        }
+      }
+
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 5rem;
+        span:nth-child(1) {
+          color: #4a4a4a;
+        }
+
+        span:nth-child(2) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .allies-page-main-list {
+      margin-top: 0.7rem;
+
+      .list-info {
+        &:before {
+          left: 0;
+        }
+
+        .list-info-info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .list-info-photo {
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 2.5rem;
+          }
+        }
+
+        .list-info-des {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          font-size: 0.8rem;
+          color: #4a4a4a;
+          span {
+            width: 40vw;
+          }
+
+          span:nth-child(2) {
+            font-size: 0.7rem;
+            color: $info-font-color;
+          }
+        }
+
+        .list-info-num {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+          width: 6rem;
+          font-size: 0.8rem;
+          color: #4a4a4a;
+          .list-info-num-div {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  //“友军详情”页面样式
+  .allies-detail-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .main-user {
+      border-bottom: 0.05rem $first-item-background-color solid;
+      .main-user-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main-user-avatar {
+          width: 2.4rem;
+          height: 2.4rem;
+          border-radius: 50%;
+        }
+      }
+
+      .main-user-clazz-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 5.5rem;
+        }
+
+        span:nth-child(2) {
+          font-size: 0.7rem;
+          color: $info-font-color;
+        }
+      }
+
+      .main-user-profit-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 5rem;
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        .main-user-profit-info-div {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: space-between;
+          .profit-info-number {
+            color: $uband-color;
+          }
+        }
+      }
+    }
+
+    .main-allies-detail {
+      .main-allies-detail-list {
+        &:before {
+          left: 0;
+        }
+
+        .main-allies-detail-list-clazz {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.8rem;
+          color: #4a4a4a;
+          span {
+            width: 55vw;
+          }
+        }
+
+        .main-allies-detail-profit-state {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+          width: 5rem;
+          font-size: 0.8rem;
+          color: #4a4a4a;
+          .profit-state-div {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+            .available {
+              color: $uband-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  //“强烈推荐”页面布局
+  .recommend-page-main {
+    position: relative;
+    margin-top: 2.2rem;
+    background-color: $white-color;
+    .recommend-page-main-user {
+      border-top: 0.05rem $first-item-background-color solid;
+      border-bottom: 0.05rem $first-item-background-color solid;
+
+      .user-profit {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        width: 6.5rem;
+        font-size: 0.8rem;
+        color: #4a4a4a;
+        .user-profit-info {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .all-profit {
+            color: $uband-color;
+          }
+        }
+      }
+
+      .user-info-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .user-photo {
+          width: 3.05rem;
+          height: 3.05rem;
+          border-radius: 2.5rem;
+        }
+      }
+
+      .current-user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 6.5rem;
+        span:nth-child(1) {
+          font-size: 0.8rem;
+          color: #4a4a4a;
+        }
+
+        span:nth-child(2) {
+          font-size: 0.7rem;
+          color: $info-font-color;
+        }
+      }
+    }
+
+    article {
+      font-size: 0.8rem;
+      color: #4a4a4a;
+      section {
+        .come-study {
+          color: $uband-color;
+        }
+      }
+
+      .first-order {
+        .first-order-des {
+          margin-left: -2.25rem;
+        }
+
+        .invitecode {
+          font-size: 1.25rem;
+          color: $uband-color;
+          width: 5rem;
+          margin-left: -4.5rem;
+          border: 0;
+        }
+
+        .copy-button {
+          width: 5rem;
+          top: -2.75rem;
+          left: 3.5rem;
+          margin: 0 auto;
+          border-radius: 2.5rem;
+        }
+      }
+
+      .share-button {
+        width: 3.5rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+        margin: 2rem auto;
+        border-radius: 2.5rem;
+      }
+
+      .popup-div {
+        background-color: rgba(0, 0, 0, 0);
+        top: 0;
+        .tap {
+          position: absolute;
+          top: 0.5rem;
+          right: 1.5rem;
+        }
+
+        .des {
+          margin-top: 6.5rem;
+          font-size: 1.25rem;
+          color: $white-color;
+        }
+      }
+
+      .note {
+        font-size: 0.7rem;
+        color: $info-font-color;
+      }
+    }
+  }
+
+  .masking-out {
+    position: fixed;
+    display: none;
+    height: 100%;
+    top: 0;
+    background-color: $black-color;
+    opacity: .6;
+    z-index: 100000;
+    .tap {
+      position: absolute;
+      top: 0.5rem;
+      right: 1.5rem;
+    }
+
+    p {
+      margin-top: 6.5rem;
+      font-size: 1.25rem;
+      color: $white-color;
+    }
+  }
+  //“玩法指南”页面布局
+  .help-page-main {
+    background-color: $white-color;
+
+    margin-bottom: 3.5rem;
+
+    section {
+      display: none;
+
+      clear: both;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .show {
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    section.uband-section {
+      .uband-photo {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      .triangle {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: $white-color;
+        border-bottom: 0.05rem $first-item-background-color solid;
+        border-left: 0.05rem $first-item-background-color solid;
+        transform: rotate(45deg);
+
+        position: relative;
+        top: 15px;
+        left: -23px;
+      }
+
+      .uband-dialog {
+        display: block;
+        padding: 0.75rem;
+        padding-top: 0;
+        margin: -3rem 0 0 3.3rem;
+        width: 60%;
+        height: auto;
+        border: 0.05rem $first-item-background-color solid;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        color: #4a4a4a;
+        span {
+          display: block;
+          .reply-red {
+            color: $uband-color;
+          }
+        }
+      }
+
+      .dialog {
+        float: left;
+      }
+    }
+
+    section.user-section {
+      .dialog {
+        width: 7.5rem;
+        height: 4rem;
+        float: right;
+
+        .user-dialog {
+          position: relative;
+          display: block;
+          padding: 0.25rem 0.5rem;
+          margin: 1rem 0 0 0.4rem;
+          width: 3.25rem;
+          height: 1.75rem;
+          border: 0.05rem #2EBAFA solid;
+          border-radius: 0.5rem;
+          font-size: 0.7rem;
+          color: #4a4a4a;
+          .triangle {
+            position: relative;
+            width: 0.6rem;
+            height: 0.6rem;
+            top: -0.8rem;
+            left: 2.4rem;
+            background-color: white;
+            border-top: 0.05rem #2EBAFA solid;
+            border-right: 0.05rem #2EBAFA solid;
+            transform: rotate(45deg);
+          }
+        }
+
+        .user-photo {
+          position: relative;
+          width: 2.4rem;
+          height: 2.4rem;
+          top: -1.9rem;
+          margin-left: 4.25rem;
+          border-radius: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .help-page-footer {
+    background-color: $white-color;
+
+    &:before {
+      border-top: none;
+    }
+
+    .next-button {
+      width: 40%;
+      border-radius: 2.5rem;
+    }
+  }
+}
+
+.promotion-share-page {
+  background-color: #FFFBE5;
+
+  .icon-together {
+    width: 6.1rem;
+    height: 2.6rem;
+  }
+
+  .promotion-info-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2.1rem;
+    margin-top: 3.5rem;
+    padding: 2rem;
+    padding-top: 0;
+    border-radius: 1rem;
+    border: 0.05rem solid #CFCFCF;
+
+    .promoter-avatar {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      margin-top: -2rem;
+      margin-bottom: 1rem;
+    }
+
+    .icon-together {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .flex-row-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .promotion-share-header {
+    .promotion-info-container {
+      .icon-first-order {
+        margin-bottom: 0.65rem;
+      }
+
+      .promotion-key {
+        margin-bottom: 0.8rem;
+        color: $uband-color;
+        font-size: 0.9rem;
+      }
+
+      .desc {
+        color: $desc-font-color;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .uband-introduction {
+    .introduction-image {
+      //margin-top: -0.35rem;
+      z-index: 100;
+      position: relative;
+      display: block;
+
+      &:first-child {
+        z-index: 200;
+      }
+
+      &.m-t-n-xxl {
+        margin-top: -16.8vw;
+      }
+    }
+  }
+
+  .promotion-share-footer {
+    background-color: $white-color;
+    padding-bottom: 1rem;
+
+    .promotion-info-container {
+      .icon-together {
+        margin-bottom: 1rem;
+      }
+
+      .icon-qrcode-prefix {
+        width: 5.95rem;
+        height: 1.85rem;
+      }
+
+      .promotion-qrcode {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 750px) {
+    .promotion-info-container {
+      max-width: 750px;
+    }
+
+    .uband-introduction {
+      .introduction-image.m-t-n-xxl {
+        margin-top: -126px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,41 @@
+'use strict';
+let token = null;
+
+export default class Util {
+  static get baseUrl() {
+    return "/";
+  }
+
+  static get token() {
+    if (token == null) {
+      let storage = localStorage.getItem("token");
+
+      if (storage == null) {
+        return null;
+      }
+
+      token = JSON.parse(storage).data;
+    }
+
+    return token;
+  }
+
+  static clearToken = () => {
+    token = null;
+  };
+
+  static get isProduct() {
+    return true;
+  }
+
+}
+
+
+// let config = {
+//   isProduct: false,
+//   clearToken: () => {},
+//   baseUrl: "http://h5test.gambition.cn/",
+//   token: "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYxLCJpYXQiOjE0OTAyNDc4MTMsImV4cCI6MTQ5MDg1MjYxM30.GcX25m8h7KNKSFJZIw7-9sqsy0tK5IopZycn3JIK50mKU_K1yoouFrrKgVwlPO7TlFAD717SP1bQuqYaxk7nTg"
+// };
+
+// export default config;
